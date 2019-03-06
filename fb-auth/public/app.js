@@ -1,3 +1,25 @@
+const messaging = firebase.messaging();
+messaging.requestPermission()
+    .then(function() {
+        console.log('Permissions granted');
+
+        return messaging.getToken();
+    })
+    .then(function(token) {
+        console.log(token);
+    })
+    .catch(function() {
+        console.log('Permissions denied ');
+    });
+
+messaging.onMessage(function(payload) {
+    const msg = JSON.stringify(payload);
+
+    alert(msg);
+    console.log('cloud message: ' + msg);
+});
+
+
 var provider = new firebase.auth.GoogleAuthProvider();
 
 const btnLogin = document.getElementById('btnLogin');
