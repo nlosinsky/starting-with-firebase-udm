@@ -16,6 +16,45 @@
     <script defer src="/__/firebase/init.js"></script>
   </head>
   <body>
+    <h5 id="msg"></h5>
+
+    <div>
+      <button id="btnLogin" type="button">Google Log In</button>
+    </div>
+    <div>
+      <button id="btnLogout" type="button">Google Log Out</button>
+    </div>
+
+
+    <div>
+      <input type="email" placeholder="Email" id="txtEmail">
+      <input type="password" placeholder="Password" id="txtPassword">
+      <div>
+        <button type="button" id="btnEmailLogin">Login</button>
+        <button type="button" id="btnCreateAccount">Create Account</button>
+      </div>
+    </div>
+
+    <div>
+      <ul id="movies"></ul>
+    </div>
+    <div>&nbsp;</div>
+    <div>
+      <ul id="characters"></ul>
+    </div>
+
+    <hr>
+    <h3>Trollbox</h3>
+    <div id="trollbox"></div>
+    <div>&nbsp;</div>
+    <div>
+      <input type="text" id="txtTrollMsg" placeholder="What now?">
+      <div>
+        <button id="btnNewTrollMsg">Post it!</button>
+      </div>
+    </div>
+
+    <script defer src="app.js"></script>
 
   </body>
 </html>
